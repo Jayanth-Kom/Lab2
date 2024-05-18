@@ -1,0 +1,127 @@
+/* General Resets and Basic Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue';
+    background-color: #F0F0F0;
+    color: #333;
+    padding: 15px;
+}
+
+header {
+    background-color: #444;
+    color: #ebe3e3;
+    padding: 15px 10px;  /* Adjust padding for mobile */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    border-bottom: 2px solid #cf0000;
+}
+
+h1 {
+    text-align: center;
+    flex-grow: 1;
+    font-size: 1.8em;
+    color: #FFA500;
+}
+
+nav {
+    margin-right: 10px;  /* Slightly reduced for mobile */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;  /* Stack vertically on mobile */
+    align-items: center;  /* Center alignment for nav items */
+}
+
+nav ul li {
+    margin-bottom: 15px;  /* Added bottom margin for spacing */
+}
+
+nav ul li a {
+    color: #FFA500;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+nav ul li a:hover {
+    color: #FFD700;
+}
+
+section {
+    margin-top: 25px;
+    padding: 25px;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project {
+    margin-bottom: 20px;
+    
+    padding-left: 12px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #CCC;
+    margin-top: 10px;
+}
+
+img {
+    width: 100%;  /* Responsive width */
+    height: auto;  /* Maintain aspect ratio */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background-color: #FFA500;
+    color: #FFF;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: block;
+    width: 100%;  /* Full width on mobile */
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #262422;
+}
+
+/* Media Queries for Desktop and Larger Devices */
+@media only screen and (min-width: 600px) {
+    nav ul {
+        flex-direction: row;  /* Horizontal layout for nav items */
+        justify-content: flex-end;  /* Align to the right */
+    }
+
+    nav ul li {
+        display: inline;  /* Inline display for horizontal nav */
+        margin-right: 15px;  /* Right margin for spacing */
+        margin-bottom: 0;  /* Remove bottom margin */
+    }
+
+    button {
+        width: auto;  /* Auto width for button */
+        margin-top: 0;  /* Adjust margin as needed */
+    }
+
+    img {
+        max-width: 350px;  /* Max width for consistency */
+        height: auto;  /* Adjusted height for a responsive design */
+    }
+}
